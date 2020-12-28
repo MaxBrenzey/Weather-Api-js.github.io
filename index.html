@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <!-- bootstrap -->
+  <!-- CSS only -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <title>Погода</title>
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+  <link rel="manifest" href="./favicon/site.webmanifest">
+  <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#2b5797">
+  <meta name="theme-color" content="#252627">
+
+</head>
+
+<body style="background-color: rgb(37, 38, 39);">
+
+  <!-- input -->
+  <div id="inp" class="container" onsubmit="">
+    <div class="input-group mb-3 mt-3">
+      <input id="inputValue" type="text" class="form-control inputValue" placeholder="Напишіть назву міста"
+        aria-label="Recipient's username" aria-describedby="button-addon2">
+      <div class="input-group-append">
+        <input id="submit" type="submit" value="Знайти" class="submit btn btn-success">
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- main card -->
+  <div id="main" class="container-sm p-0 card card-1 center-main-box front">
+    <h1 id="main-name-day" class="mb-1 front">Сьогодні</h1>
+    <h2 id="cityName" class="mb-1 cityName front">Stockholm, SE</h2>
+    <h3 id="tempruter" class="mb-1 display-4 tempruter front">23<span>°</span></h3>
+    <i id="icon" class="front"><i class="far fa-sun fa-4x"></i></i>
+    <h2 id="weather" class="weather front">Чисте Небо</h2>
+    <!-- <h3>Thursday 14:20 PM</h3> -->
+    <div class="d-flex justify-content-sm-center front">
+      <div class="p-2">
+        <p class="mb-0">Вітер <span id="wind">0</span> м/с</p>
+      </div>
+      <div class="p-2">
+        <p class="mb-0">Атм.Тиск <span id="pressure">0</span> гПа</p>
+      </div>
+    </div>
+    <div class="d-flex justify-content-sm-center mb-1 front">
+      <div class="mb-0 p-2">
+        <p class="mb-0">Вологість <span id="humidity">0</span> %</p>
+      </div>
+      <div class="mb-0 p-2">
+        <p class="mb-0">Хмарнісь <span id="cloudiness">0</span> %</p>
+      </div>
+    </div>
+    <!-- main card back -->
+    <div id="main-back" class="back">
+      <div class="back-content center">
+        <h2 class="createbBy">Created by: </h2>
+        <h3>Max Brenzey</h3>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- cards -->
+  <div class="container mt-3">
+    <div class="row row-mb-3 text-center">
+      <!-- footer card 1 -->
+      <div id="card1" class="col-12 col-sm-6 col-md-6 col-xl p-0 mt-1 card card-1 center-main-box front">
+        <div class="card-body front">
+          <h2>Завтра</h2>
+          <i id="iconTommorow"><i class="far fa-sun fa-4x"></i></i>
+          <h3 id="tempTommorow" class="mt-1">22<span>°</span></h3>
+          <h5 id="descrTomorrow">Чисте Небо</h5>
+        </div>
+        <!-- footer card back 1 -->
+        <div id="footer-card-back-1" class="back">
+          <div class="back-content center">
+            <h2 class="createbBy">Created by: </h2>
+            <h3>Max Brenzey</h3>
+          </div>
+        </div>
+      </div>
+      <!-- footer card 2 -->
+      <div id="card2" class="col-12 col-sm-6 col-md-6 col-xl p-0 mt-1 card card-1 center-main-box front">
+        <div class="card-body front">
+          <h2>Післязавтра</h2>
+          <i id="iconAfterTommorow"><i class="far fa-sun fa-4x"></i></i>
+          <h3 id="tempAfterTommorow" class="mt-1">21<span>°</span></h3>
+          <h5 id="descrAfterTomorrow">Чисте Небо</h5>
+        </div>
+        <!-- footer card back 2 -->
+        <div id="footer-card-back-2" class="back">
+          <div class="back-content center">
+            <h2 class="createbBy">Created by: </h2>
+            <h3>Max Brenzey</h3>
+          </div>
+        </div>
+      </div>
+      <!-- footer card 3 -->
+      <div id="card3" class="col-12 col-sm-6 col-md-6 col-xl p-0 mt-1 card card-1 center-main-box front">
+        <div class="card-body front">
+          <h2>День 4</h2>
+          <i id="iconDay4"><i class="fas fa-cloud fa-4x"></i></i>
+          <h3 id="tempDay4" class="mt-1">22<span>°</span></h3>
+          <h5 id="descrDay4">Хмарно</h5>
+        </div>
+        <!-- footer card back 3 -->
+        <div id="footer-card-back-3" class="back">
+          <div class="back-content center">
+            <h2 class="createbBy">Created by: </h2>
+            <h3>Max Brenzey</h3>
+          </div>
+        </div>
+      </div>
+      <!-- footer card 4 -->
+      <div id="card4" class="col-12 col-sm-6 col-md-6 col-xl p-0 mt-1 card card-1 center-main-box front">
+        <div class="card-body front">
+          <h2>День 5</h2>
+          <i id="iconDay5"><i class="fas fa-cloud fa-4x"></i></i>
+          <h3 id="tempDay5" class="mt-1">21<span>°</span></h3>
+          <h5 id="descrDay5">Хмарно</h5>
+        </div>
+        <!-- footer card back 4 -->
+        <div id="footer-card-back-4" class="back">
+          <div class="back-content center">
+            <h2 class="createbBy">Created by: </h2>
+            <h3>Max Brenzey</h3>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <script src="./app.js"></script>
+</body>
+
+</html>
